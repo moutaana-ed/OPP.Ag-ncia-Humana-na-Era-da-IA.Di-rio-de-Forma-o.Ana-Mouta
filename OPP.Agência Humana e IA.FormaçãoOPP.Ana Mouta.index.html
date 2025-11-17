@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Formação - Agência Humana na Era da IA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .ebook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .cover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .cover h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cover .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .cover .author {
+            font-size: 1.1em;
+            margin-top: 40px;
+            font-style: italic;
+        }
+        
+        .content {
+            padding: 60px;
+        }
+        
+        .page {
+            margin-bottom: 60px;
+            page-break-after: always;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .quote {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        .highlight-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background: #d1ecf1;
+            border: 2px solid #17a2b8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .reflection-box {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .nav-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .page-number {
+            text-align: center;
+            color: #999;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .nav-buttons {
+                display: none;
+            }
+            .ebook-container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ebook-container">
+        <div class="cover">
+            <h1>Diário de Formação</h1>
+            <div class="subtitle">Agência Humana na Era da IA:<br>Desafios e Estratégias para a Psicologia</div>
+            <div class="author">
+                Ana Mouta<br>
+                Workshop DRN.Ordem dos Psicólogos Portugueses<br>
+                Outubro de 2025
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <!-- Página 1: Introdução -->
+            <div class="page">
+                <h2>Apresentação do Workshop</h2>
+                
+                <h3>Objetivos da Formação</h3>
+                <p>Este diário documenta os conteúdos explorados ao longo do workshop «Agência Humana na Era da Inteligência Artificial: Desafios e Estratégias para a Psicologia», uma formação direcionada a profissionais de Psicologia que procuram compreender e analisar criticamente os impactos das tecnologias contemporâneas na experiência humana. Ao longo das sessões, são trabalhados conceitos, práticas e tensões que atravessam o uso da IA e afetam dimensões subjetivas, intersubjetivas e coletivas da agência humana.</p>
+                
+                <div class="highlight-box">
+                    <h4>Objetivos Principais:</h4>
+                    <ul>
+                        <li>Compreender o fenómeno da IA no seu contexto social e epistemológico</li>
+                        <li>Compreender como o uso da IA afeta as pessoas, as suas relações e a experiência coletiva</li>
+                        <li>Analisar a apropriação da IA em vários contextos de atividade humana</li>
+                        <li>Refletir sobre o papel e o uso da IA na prática e investigação psicológica</li>
+                    </ul>
+                </div>
+                
+                <h3>Notas Pessoais de Aprendizagem</h3>
+                <div class="reflection-box">
+                    <p><strong>Espaço para reflexão:</strong></p>
+                    <p>O que espero desta formação?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+            
+            <!-- Página 2: Conceções de IA -->
+            <div class="page">
+                <h2>1. Compreender o Fenómeno da IA</h2>
+                
+                <h3>Três Conceções de Inteligência Artificial</h3>
+                
+                <div class="info-box">
+                    <h4>Conceção Clássica (McCarthy, 1955)</h4>
+                    <p><em>«A ciência e a engenharia de criar máquinas inteligentes.»</em></p>
+                    <p>Esta perspetiva fundacional encara a IA como um projeto técnico-científico de replicação da inteligência em máquinas.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Conceção Funcionalista (Russell & Norvig, 2010)</h4>
+                    <p>Agentes que <em>«percebem o seu ambiente e tomam ações que maximizam as suas hipóteses de sucesso»</em>.</p>
+                    <p>Foco na capacidade de ação orientada a objetivos, independentemente do processo interno.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Conceção Crítica/Sociotécnica (Jasanoff & Kim, 2015; Pasquinelli, 2023)</h4>
+                    <p>Sistemas culturais e sociotécnicos (Latour, 2005; Pasquinelli, 2023) que refletem imaginários e valores partilhados, moldando o desenho, o investimento, as políticas e os beneficiários.</p>
+                    <p>Esta perspetiva reconhece a IA como construção social que incorpora valores, vieses e relações de poder.</p>
+                </div>
+                
+                <div class="reflection-box">
+                    <h4>Reflexão</h4>
+                    <p>A emergência e rápida proliferação da Inteligência Artificial (IA) representam um significativo ponto de inflexão na história recente da humanidade. Esta materialização tecnológica não se limita a otimizar processos industriais ou a automatizar tarefas repetitivas; ela penetra profundamente na esfera da agência humana, desafiando as nossas conceções sobre inteligência, escolha e decisão, trabalho e, fundamentalmente, sobre o que significa ser humano. Para a Psicologia, este cenário impõe uma reavaliação crítica do seu papel, exigindo que os profissionais compreendam o fenómeno da IA não apenas como uma ferramenta, mas como um contexto social e epistemológico que afeta as pessoas, as suas relações e a experiência coletiva </p>
+                                    </div>
+            </div>
+            
+            <!-- Página 3: Imaginários -->
+            <div class="page">
+                <h2>2. Imaginários sobre IA e Psicologia</h2>
+                
+                <h3>Exercício dos Geradores de Imagem</h3>
+                <p>Durante o workshop, exploramos como a IA visual representa a Psicologia através da geração de imagens para três prompts:</p>
+                <ul>
+                    <li>«Aplicações de Inteligência Artificial na área Clínica»</li>
+                    <li>«Aplicações de Inteligência Artificial na área de Educação»</li>
+                    <li>«Aplicações de Inteligência Artificial na área das Organizações/Empresas»</li>
+                </ul>
+                
+                <h3>Padrões Identificados na Reflexão</h3>
+                
+                <div class="highlight-box">
+                    <h4>Ênfase na Mente como Cérebro</h4>
+                    <p>As imagens privilegiam representações cerebrais e cognitivas. Questão: onde ficam a experiência afetiva, os modelos dinâmicos e desenvolvimentistas?</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Individualidade vs. Relacionalidade</h4>
+                    <p>Predominância de representações individuais. Questão: onde está a dimensão psicossocial, as interações?</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Pessoa sem Contexto</h4>
+                    <p>Ausência de elementos contextuais e ecológicos. Questão: como fica o modelo ecológico?</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>Estética Tecnocêntrica</h4>
+                    <p>As imagens reduzem a colaboração – agência distribuída – à hegemonia dos dados.</p>
+                </div>
+                
+                <div class="quote">
+                    «Se a IA nos vê assim, como podemos garantir que ela não perpetua este modelo simplificado nos seus produtos e aplicações?»
+                </div>
+            </div>
+            
+            <!-- Página 4: Neutralidade -->
+            <div class="page">
+                <h2>3. IA e a Questão da Neutralidade</h2>
+                
+                <h3>Revelação de Vieses Algorítmicos</h3>
+                <p>IA não é neutra. As imagens e representações geradas por sistemas de IA sobre a Psicologia frequentemente revelam um imaginário coletivo dominante que pode ser simplificado ou enviesado. Esta visão simplificada levanta a questão da neutralidade em IA: se a IA perpetua um modelo simplificado da Psicologia, como garantir que ela não reproduza vieses algorítmicos nos seus produtos e aplicações? A ausência de neutralidade em IA exige que os psicólogos estejam atentos à revelação de vieses e questionem o que é que essa visão põe em causa.</p>
+                
+                <h3>Terminologia Fundamental</h3>
+                
+                <table>
+                    <tr>
+                        <th>Conceito</th>
+                        <th>Definição</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Inteligência Artificial</strong></td>
+                        <td>Máquinas que simulam o pensamento humano, resolvendo problemas, reconhecendo fala ou compreendendo linguagem</td>
+                        <td>Assistentes virtuais que respondem a perguntas em linguagem natural</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aprendizagem Automática</strong></td>
+                        <td>Permite que as máquinas aprendam a partir de dados e melhorem ao longo do tempo sem programação direta</td>
+                        <td>Sistemas de recomendação (Netflix) que sugerem filmes com base em preferências</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Aprendizagem Profunda</strong></td>
+                        <td>Usa redes neuronais em camadas para tratar tarefas complexas como reconhecimento de imagem e de fala</td>
+                        <td>Assistentes de voz (Siri, Alexa) que compreendem comandos orais</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IA Generativa</strong></td>
+                        <td>Utiliza modelos de aprendizagem profunda para gerar respostas semelhantes às humanas</td>
+                        <td>ChatGPT a simular diálogos terapêuticos para treino de competências</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Página 5: História dos Algoritmos -->
+            <div class="page">
+                <h2>4. Perspetiva Histórica dos Algoritmos</h2>
+                
+                <h3>Pensamento Algorítmico antes da Modernidade</h3>
+                <p>Muito antes da formalização matemática moderna, culturas antigas já pensavam de forma algorítmica através de regras ritualizadas, simbólicas e procedimentais para interagir com o cosmos e/ou com o divino:</p>
+                
+                <div class="info-box">
+                    <h4>China Antiga (c. 2200 a.C.)</h4>
+                    <p>Os quadrados mágicos surgem ligados à cosmologia taoista. Cada número representava forças universais e o equilíbrio perfeito dos somatórios era visto como manifestação da harmonia cósmica.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Mundo Islâmico Medieval</h4>
+                    <p>O Hisab al-jabr (origem da palavra «álgebra») incluía procedimentos passo a passo para cálculos e práticas religiosas (posicionamento exato em rituais ou orientação para Meca).</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Egito e Mesopotâmia</h4>
+                    <p>Rituais de oferenda seguiam estruturas algorítmicas: sequências precisas de ações (lavar, oferecer, pronunciar, selar), repetidas com variações paramétricas.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>Grécia e Mundo Pitagórico</h4>
+                    <p>Os números eram vistos como formas vivas de harmonia universal. Calcular era uma forma de ritual filosófico – tradução do cosmos em ordem numérica.</p>
+                </div>
+                
+                <h3>Implicações para a Compreensão Atual</h3>
+                <ul>
+                    <li>Os algoritmos codificam intuições culturais sobre ordem, previsibilidade e controlo</li>
+                    <li>A «inteligência» algorítmica traduz uma imaginação social sobre o que significa pensar, decidir e prever</li>
+                    <li>O desejo de delegar o juízo à máquina é também um ritual moderno de transcendência pela técnica</li>
+                </ul>
+                
+                <div class="quote">
+                    «As máquinas não são apenas instrumentos técnicos; elas funcionam como espelhos projetivos dos desejos, medos e aspirações humanas.»
+                </div>
+            </div>
+            
+            <!-- Página 6: Transparência -->
+            <div class="page">
+                <h2>5. Transparência como Ritual Moderno</h2>
+                
+                <h3>A Busca pela Explicabilidade</h3>
+                <p>Fala-se muito em «tornar os algoritmos explicáveis», «auditar» ou «abrir a caixa preta». Estes gestos funcionam como atos rituais de purificação epistemológica:</p>
+                
+                <ul>
+                    <li>O observador sente que «compreender» equivale a «purificar»</li>
+                    <li>A transparência torna-se um valor moral, uma espécie de redenção técnica</li>
+                    <li>É o equivalente moderno da confissão e do esclarecimento espiritual</li>
+                </ul>
+                
+                <h3>Deslocamento da Confiança</h3>
+                <p>A confiança desloca-se do divino para o técnico: acreditamos que o código, uma vez explicado, garantirá justiça, neutralidade e verdade. A explicação substitui a fé; mas o mecanismo simbólico é o mesmo: uma procura de sentido e segurança num sistema que excede a nossa compreensão imediata.</p>
+                
+                <div class="highlight-box">
+                    <h4>Questão Central</h4>
+                    <p><strong>Não perguntemos «o que a IA pode fazer», mas se «queremos que faça».</strong></p>
+                    <p>A IA mostra como estamos a desejar, a projetar e a organizar a nossa inteligência e vida coletivas.</p>
+                </div>
+                
+                <div class="reflection-box">
+                    <h4>Para Reflexão:</h4>
+                    <p>Que estratégias podem ser adotadas para o uso de ferramentas com IA de forma a preservar o sentido de agência e promover os propósitos amplos do desenvolvimento humano?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+            
+            <!-- Página 7: História da Inteligência -->
+            <div class="page">
+                <h2>6. Breve História do Conceito de «Inteligência»</h2>
+                
+                <h3>Um Conceito Mutante</h3>
+                <p>O que revela a escolha de um conceito contestável como o de «Inteligência» para designar esta tecnologia? Várias disciplinas, ao longo da sua história, têm debatido
+a natureza deste conceito mutante e transdisciplinar.</p>
+                
+                <h3>Henri Bergson: Inteligência e Intuição (séc. XIX-XX)</h3>
+                <div class="info-box">
+                    <p><strong>Inteligência:</strong> orientada para o prático, o fixo, o mensurável</p>
+                    <p><strong>Intuição:</strong> acesso direto ao movimento da vida, ao contínuo, ao real em transformação</p>
+                    <p>Bergson propõe que apenas com a intuição filosófica compreendemos o fluxo que escapa à inteligência instrumental.</p>
+                </div>
+                
+                <h3>Neurociência: Procura de um «locus» cerebral (final séc. XIX - séc. XX)</h3>
+                <div class="info-box">
+                    <p>Procura de áreas específicas no cérebro: córtex pré-frontal (funções executivas), hipocampo (memória), rede parietal-frontal (atenção e raciocínio).</p>
+                    <p><strong>Tensão:</strong> Modelos localizacionistas vs. modelos distribuídos (redes neurais)</p>
+                </div>
+                
+                <h3>Piaget, Vygotsky, Bruner: Inteligência como ação em desenvolvimento (séc. XX)</h3>
+                <div class="info-box">
+                    <p>A inteligência não é uma coisa «dada», mas construída na interação com o mundo.</p>
+                    <p>Expressa-se em ação, resolução de problemas, interação com mundo social e simbólico, não como «conteúdo» fixo.</p>
+                </div>
+                
+                <h3>A IA Redefine o Campo?</h3>
+                <ul>
+                    <li>IA propõe um novo «locus»: fora do corpo humano</li>
+                    <li>Mas... porque escolhemos o termo «inteligência» para nomear esta tecnologia?</li>
+                    <li>O conceito é revelador das nossas aspirações, mas é também vago, disputado e transdisciplinar</li>
+                </ul>
+                
+                <div class="quote">
+                    «Será que a IA nos revela mais sobre a inteligência humana ou sobre os nossos desejos de simulá-la?»
+                </div>
+            </div>
+            
+            <!-- Página 8: Golpes Narcísicos -->
+            <div class="page">
+                <h2>7. Os Quatro Golpes Narcísicos</h2>
+                
+                <h3>Perspetiva de Catherine Malabou</h3>
+                
+                <div class="info-box">
+                    <h4>1. A Terra não é o centro do universo (Copérnico)</h4>
+                    <p>A descoberta de que a Terra gira em torno do Sol desfez a ilusão de centralidade humana no cosmos.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>2. Não somos criações perfeitas (Darwin)</h4>
+                    <p>Somos frutos de uma longa evolução biológica por seleção natural.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>3. A razão não comanda tudo (Freud)</h4>
+                    <p>O inconsciente dirige boa parte das nossas ações.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>4. A inteligência humana já não é exclusiva (Malabou)</h4>
+                    <p>IA desafia a ideia de que o pensamento é exclusivamente humano. IA como simulacro: o que representa e o que projetamos nela?</p>
+                </div>
+                
+                <h3>Da Perda de Controlo à Visão Sociotécnica</h3>
+                
+                <table>
+                    <tr>
+                        <th>Dimensão</th>
+                        <th>Implicação</th>
+                    </tr>
+                    <tr>
+                        <td><strong>IA como construção humana</strong></td>
+                        <td>Cada sistema reflete decisões de programadores, empresas, contextos culturais e enquadramentos políticos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tecnologia com valores incorporados</strong></td>
+                        <td>As opções de design (o que mede, o que omite, o que prioriza) já traduzem valores e visões do mundo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agência distribuída</strong></td>
+                        <td>O controlo não desaparece, transforma-se. A agência passa a ser partilhada entre utilizadores, criadores e sistemas automatizados</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsabilidade humana ampliada</strong></td>
+                        <td>Compreender a IA como construção social devolve-nos o papel ativo: decidir como, porquê e para quem estas tecnologias são criadas e usadas</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Página 9: Aceleração Tecnológica -->
+            <div class="page">
+                <h2>8. Papel da Psicologia na Aceleração Tecnológica</h2>
+                
+                <h3>Face Oculta da Pressão para a Inovação</h3>
+                
+                <div class="highlight-box">
+                    <h4>Caso: Trabalhadores de Rotulagem de Dados</h4>
+                    <p><strong>Empresa:</strong> SAMA, contratada pela OpenAI para treinar sistemas como ChatGPT</p>
+                    <p><strong>Objetivo:</strong> Classificar conteúdo altamente sensível e violento (discursos de ódio, abusos sexuais, violência extrema)</p>
+                    <p><strong>Pagamento:</strong> Menos de 2 dólares/hora</p>
+                    <p><strong>Impacto:</strong> Relatos de stress, insónias, ansiedade e distúrbios emocionais – apoio psicológico insuficiente</p>
+                </div>
+                
+                <h3>Valores em Tensão</h3>
+                
+                <div class="info-box">
+                    <h4>Inovação com Ética</h4>
+                    <p><strong>Proteção do utilizador final:</strong> Assegurar que modelos de IA não reproduzem conteúdos violentos, abusivos ou discriminatórios</p>
+                    <p><strong>Segurança:</strong> Evitar que a IA gere respostas nocivas ou ofensivas</p>
+                    <p><strong>Mínimo risco:</strong> Reduzir o risco de danos em pessoas que interagem com a tecnologia</p>
+                    <p><strong>Justiça e equidade:</strong> Limitar a propagação de preconceitos, discursos de ódio e estigmas em larga escala</p>
+                </div>
+                
+                <h3>Impactos nos Trabalhadores</h3>
+                
+                <div class="reflection-box">
+                    <h4>Qualificação e Identidade Profissional</h4>
+                    <p>Que tipo de aprendizagem profissional é promovida ou inibida quando o trabalho consiste em alimentar sistemas de IA, seguindo regras e métricas pré-definidas?</p>
+                </div>
+                
+                <div class="reflection-box">
+                    <h4>Socialização e Pertença</h4>
+                    <p>Como é afetado o sentido de pertença e identidade coletiva quando o trabalho humano é fragmentado, invisível e mediado por plataformas globais?</p>
+                </div>
+                
+                <div class="reflection-box">
+                    <h4>Subjetificação</h4>
+                    <p>Que tipo de sujeito emerge de um contexto onde o humano serve a 'grande engrenagem' e como pode a Psicologia ajudar a reconstituir sentido de autoria?</p>
+                </div>
+            </div>
+            
+            <!-- Página 10: Caso Organizacional -->
+            <div class="page">
+                <h2>8.1. Caso Prático: Coach Automatizado</h2>
+                
+                <h3>Descrição da Situação</h3>
+                <div class="highlight-box">
+                    <p>Numa empresa multinacional, foi implementada uma ferramenta de IA (um coach automatizado) para avaliar o desempenho dos participantes em reuniões de projeto online.</p>
+                    <p>Os relatórios automáticos, enviados para cada colaborador, analisam discurso, empatia, assertividade, entre outros critérios, aplicados de forma igual a todos, sem distinção de papéis, funções ou responsabilidades no projeto.</p>
+                    <p><strong>Resultado:</strong> Mesmo com avaliações globalmente positivas, têm-se registado quebras de participação ao longo das reuniões e o desempenho dos profissionais baixou.</p>
+                </div>
+                
+                <h3>Questões para Análise Crítica</h3>
+                
+                <ol>
+                    <li>Que tipo de sinais o sistema usou para tirar conclusões deste tipo?</li>
+                    <li>Como é que esses dados levaram a uma avaliação de empatia, assertividade ou envolvimento?</li>
+                    <li>Que efeitos pode ter nas pessoas e nas equipas o facto de estarem a ser observadas e avaliadas por um sistema automático?</li>
+                    <li>Que mensagens simbólicas a organização transmite ao usar esta ferramenta?</li>
+                    <li>Que papel podem ter psicólogos/as integrados em organizações na negociação entre a racionalidade algorítmica e a complexidade humana nas relações de trabalho?</li>
+                </ol>
+                
+                <div class="reflection-box">
+                    <h4>Reflexão Pessoal:</h4>
+                    <p>Como abordaria este caso na minha prática profissional?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+            
+            <!-- Página 11: Escolas e Dados -->
+            <div class="page">
+                <h2>9. Escolas: Dados Pessoais e Aplicações com IA</h2>
+                
+                <h3>Contexto Atual</h3>
+                <p>A IA está a transformar o ambiente escolar, sendo usada para a gestão escolar e por professores (avaliação automática, planeamento de aulas) e estudantes (tutoria personalizada, apoio à escrita). Contudo, as escolas tornaram-se o principal alvo de ataques a dados pessoais em 2025.</p>
+                
+                <h3>Aplicações para Professores/as</h3>
+                <ul>
+                    <li><strong>Avaliação automática e feedback:</strong> IA ajuda a corrigir testes, identificar erros e redigir comentários (ex: Manus, Gemini, ChatGPT, Turnitin Draft Coach)</li>
+                    <li><strong>Planeamento de aulas:</strong> Sistema sugere planos, objetivos e exercícios (ex: MagicSchool.ai, LessonLab, ChatGPT Edu)</li>
+                    <li><strong>Criação de materiais:</strong> Fichas, apresentações, quizzes (ex: Canva Magic Write, Wayground)</li>
+                    <li><strong>Formação:</strong> Simulações com situações de sala de aula (ex: ChatGPT com papéis simulados)</li>
+                    <li><strong>Adaptação de conteúdos:</strong> Simplifica textos, gera versões em leitura fácil ou traduz (ex: Texthelp Read&Write, Rewordify, Microsoft Immersive Reader)</li>
+                </ul>
+                
+                <h3>Aplicações para Estudantes</h3>
+                <ul>
+                    <li><strong>Tutoria personalizada:</strong> IA responde a dúvidas, explica conteúdos (ex: Khanmigo, Socratic, ChatGPT Edu, Perplexity)</li>
+                    <li><strong>Apoio à escrita:</strong> Corrige ortografia, gramática, estilo (ex: Grammarly, QuillBot, DeepL Write)</li>
+                    <li><strong>Aprendizagem de línguas:</strong> Pratica conversas, pronúncia e vocabulário (ex: Duolingo Max, TalkPal)</li>
+                    <li><strong>Estudo interativo:</strong> Transforma o estudo em jogos, quizzes e desafios (ex: Quizlet AI Tutor, Kahoot AI, Edpuzzle AI)</li>
+                    <li><strong>Trabalho colaborativo:</strong> Para aprendizagem baseada em projetos (ex: Miro)</li>
+                    <li><strong>Apoio a necessidades diversas:</strong> Lê textos em voz alta, transcreve, traduz e simplifica (ex: Read&Write, Otter.ai)</li>
+                </ul>
+            </div>
+            
+            <!-- Página 12: Gestão e SPO -->
+            <div class="page">
+                <h3>Aplicações para Gestão Escolar</h3>
+                <ul>
+                    <li><strong>Análise de dados:</strong> IA faz gráficos e relatórios sobre notas, presenças e comportamento (ex: Power BI Copilot)</li>
+                    <li><strong>Organização de horários:</strong> Ajuda a montar horários, dividir turmas e equilibrar professores e recursos (ex: Tools4Schools, Class Composer, SchoolAI)</li>
+                    <li><strong>Atendimento automático:</strong> Chatbots que respondem a perguntas simples sobre horários, faltas, reuniões</li>
+                    <li><strong>Previsão de problemas:</strong> Analisa dados e identifica risco de abandono ou baixo rendimento (ex: AI Predictive Analytics, SchoolAI Dashboards)</li>
+                    <li><strong>Gestão de documentos:</strong> IA escreve atas, organiza informação e resume e-mails (ex: Notion AI, Meetgeek for Google)</li>
+                </ul>
+                
+                <h3>Aplicações para Serviços de Psicologia e Orientação</h3>
+                <ul>
+                    <li><strong>Apoio na escrita de relatórios:</strong> Rascunhos de relatórios, planos de apoio (ex: Manus, ChatGPT, Gemini, Copilot)</li>
+                    <li><strong>Identificação de sinais emocionais:</strong> Apps que conversam com estudantes e ajudam a monitorizar ansiedade, tristeza ou stress (ex: Wysa, Woebot Health)</li>
+                    <li><strong>Simulação de conversas difíceis:</strong> Respostas para situações com estudantes, famílias ou docentes (ex: ChatGPT/Gemini como simulador de papéis)</li>
+                    <li><strong>Criação de materiais psicoeducativos:</strong> Folhetos, cartazes e vídeos de sensibilização (ex: Canva, Miro)</li>
+                    <li><strong>Apoio vocacional:</strong> Atividades e questionários orientados por IA (ex: CareerVillage.org)</li>
+                </ul>
+                
+                <div class="reflection-box">
+                    <h4>Limites Reais da IA no Acompanhamento Psicológico: Lições de um Caso Prático</h4>
+                    <p>A experiência prática no desenvolvimento de uma aplicação de IA para acompanhamento psicológico mostrou, de forma inequívoca, que existem limites intransponíveis para o seu uso em saúde mental. Embora a IA generativa (LLMs) seja útil para explicar conceitos básicos sobre emoções, organizar informação pessoal ou facilitar momentos de autorreflexão, ela torna-se inadequada e potencialmente perigosa quando confrontada com situações de crise, trauma profundo ou risco imediato. Estes limites não resultam apenas de questões técnicas, mas de limitações estruturais: a IA não compreende sofrimento humano, não assume responsabilidade clínica, nem pode substituir o cuidado especializado. A conclusão deste caso real é clara: há espaço para a IA como apoio leve e psicoeducativo, mas ela não é nem pode ser um suporte clínico.</p>
+                              </div>
+            
+            <!-- Página 13: Auditoria Algorítmica -->
+            <div class="page">
+                <h2>10. Auditoria Algorítmica</h2>
+                
+                <h3>O que é?</h3>
+                <p>Procura-se garantir a mitigação de riscos, discriminação e o cumprimento legal e ético dos sistemas de IA utilizados na prática psicológica.</p>
+                <p>Para isso, os dados usados são analisados na sua elegibilidade, potencial de risco e possibilidade de serem variáveis proxy.</p>
+                <p>Consiste numa revisão sistemática de como os dados e algoritmos tomam decisões.</p>
+                
+                <h3>Categorias de Dados</h3>
+                
+                <table>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Definição</th>
+                        <th>Exemplos</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Critérios Elegíveis</strong></td>
+                        <td>Dados legalmente apropriados, eticamente sólidos e diretamente relevantes para o construto psicológico que está a ser medido</td>
+                        <td><strong>Clínica:</strong> Frequência/participação em sessões (adesão ao tratamento)<br>
+                        <strong>Organizações:</strong> Experiência comprovada (proficiência em investigação)<br>
+                        <strong>Educação:</strong> Frequência de acesso a recursos pedagógicos digitais</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fatores de Risco</strong></td>
+                        <td>Características que podem indicar maior probabilidade de resultado específico, mas que devem ser usadas com extrema precaução para evitar vieses, estigmatização ou discriminação</td>
+                        <td><strong>Clínica:</strong> Rendimento económico (acesso a recursos)<br>
+                        <strong>Educação:</strong> Histórico de absentismo (saúde, transportes...)<br>
+                        <strong>Organizações:</strong> Histórico de gaps no percurso profissional por motivo de licença</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Variáveis Proxy</strong></td>
+                        <td>Dados que funcionam como substituto para atributos sensíveis (muitas vezes de forma não intencional), levando a resultados enviesados ou injustos</td>
+                        <td><strong>Clínica:</strong> Linguagem regional usada em chatbots<br>
+                        <strong>Educação:</strong> Frequência de participação de pais em reuniões<br>
+                        <strong>Organizações:</strong> Universidade frequentada (status socioeconómico); localização da residência (classe social)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Página 14: Caso Vigilância -->
+            <div class="page">
+                <h2>10.1. Exemplo de Auditoria: Vigilância por IA nas Escolas</h2>
+                
+                <h3>Contexto</h3>
+                <div class="highlight-box">
+                    <p>Uma escola secundária utiliza um sistema de IA para sinalizar estudantes que possam estar «em risco» de comportamento violento ou autoagressão, com base na sua atividade digital (e-mails, registos de conversa, pesquisas na internet).</p>
+                    <p>O sistema alerta a escola para que possa ser oferecida uma intervenção preventiva.</p>
+                </div>
+                
+                <h3>Caso: Joana, 15 anos</h3>
+                <div class="info-box">
+                    <ul>
+                        <li>Vive num bairro na periferia da cidade (fator de risco: código postal)</li>
+                        <li>Recentemente assumiu-se como pessoa transgénero (proxy: identidade de género)</li>
+                        <li>Lida com ansiedade, tem acompanhamento psicológico (dados de saúde mental)</li>
+                        <li>Escreveu uma composição na aula de inglês intitulada «O Dia em que o Mundo Acabou»</li>
+                    </ul>
+                </div>
+                
+                <h3>O que o Sistema de IA Fez</h3>
+                <div class="reflection-box">
+                    <p>Sinalizou a Joana como «alto risco» para comportamento violento, com base em:</p>
+                    <ul>
+                        <li>Filtros de palavras-chave da composição («mundo acabou», «violência»)</li>
+                        <li>Associação do código postal com estatísticas de criminalidade</li>
+                        <li>Presença de registos de aconselhamento psicológico</li>
+                    </ul>
+                    <p>Enviou automaticamente um alerta ao diretor da escola e aos serviços sociais locais. A Joana foi chamada à Direção para ser questionada.</p>
+                </div>
+                
+                <h3>Questões para Análise</h3>
+                <ol>
+                    <li>Que variáveis proxy foram utilizadas indevidamente?</li>
+                    <li>Que impacto psicológico pode ter esta sinalização na Joana?</li>
+                    <li>Como poderia uma auditoria algorítmica ter prevenido esta situação?</li>
+                    <li>Que papel deveria ter o/a psicólogo/a escolar neste processo?</li>
+                </ol>
+                
+                <div class="reflection-box">
+                    <h4>Notas de Reflexão:</h4>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+            
+            <!-- Página 15: Agência Humana -->
+            <div class="page">
+                <h2>11. Agência Humana: Conceito Central</h2>
+                
+                <h3>Definição</h3>
+                <div class="highlight-box">
+                    <p><strong>Agência Humana</strong> significa agir intencionalmente, fazer escolhas com significado, ser responsável pelas suas ações e influenciar o ambiente com base em objetivos, reflexões e negociação.</p>
+                </div>
+                
+                <h3>O que significa agir num mundo partilhado com máquinas inteligentes?</h3>
+                <ul>
+                    <li>Compreender o impacto existencial e psicológico da automação e da IA</li>
+                    <li>Reconhecer o sentido de agência como o novo «território sensível» onde se joga a identidade, a autonomia e a responsabilidade humanas</li>
+                    <li>Situar a Psicologia como disciplina que explora a agência humana como dimensão de autoria e responsabilidade num mundo tecnológico</li>
+                </ul>
+                
+                <h3>Exercício: Bolas e Balões</h3>
+                <p>A experiência corporal como metáfora de agência:</p>
+                
+                <div class="info-box">
+                    <h4>A Bola</h4>
+                    <p>Permite movimentos previsíveis, regulares, com controlo mais direto. Representa sistemas (ou contextos) em que intenção, planeamento e resultado estão alinhados.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>O Balão</h4>
+                    <p>Apresenta movimentos erráticos e atraso na resposta. Representa situações em que o feedback é imprevisível, apesar da intenção e da ação bem executada.</p>
+                </div>
+                
+                <div class="quote">
+                    «Ser agente não é sentir que se controla tudo. É estar implicado no processo, mesmo quando ele é difícil ou incerto.»
+                </div>
+            </div>
+            
+            <!-- Página 16: Componentes da Agência -->
+            <div class="page">
+                <h2>11.1. Componentes do Sentido de Agência</h2>
+                
+                <table>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Exemplo (Exercício Bola/Balão)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>1. Intenção</strong></td>
+                        <td>Quero passar a bola ao meu par</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Planeamento</strong></td>
+                        <td>Ajusto a força, o ritmo, o movimento, consoante o objeto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Autorregulação</strong></td>
+                        <td>Perante a frustração (ex: com o balão), ajusto-me (autorregulação emocional e cognitiva presentes na aprendizagem)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Autorreflexão</strong></td>
+                        <td>O que «não correu bem» não dependeu de mim (começa a separar-se controlo físico de perceção de agência)</td>
+                    </tr>
+                </table>
+                
+                <h3>Sentido de Agência</h3>
+                <p>É a perceção subjetiva de ser autor das próprias ações e dos seus efeitos. É um pilar da experiência de controlo, autonomia e responsabilidade, aspetos centrais no funcionamento psicológico e nas interações, incluindo a relação terapêutica.</p>
+                
+                <h3>A Fluência Não Define a Agência</h3>
+                <div class="info-box">
+                    <p>O nosso cérebro infere o sentido de agência com base na fluência, no tempo e na consistência dos resultados.</p>
+                    <p><strong>Importante:</strong> Tecnologias com IA são publicitadas como reduzindo TEMPO, ESFORÇO, ESCOLHAS.</p>
+                    <p>Isso pode criar uma ilusão de agência ou, inversamente, reduzir o sentido genuíno de autoria.</p>
+                </div>
+            </div>
+            
+            <!-- Página 17: Tipos de Agência -->
+            <div class="page">
+                <h2>11.2. Tipos de Agência Humana</h2>
+                
+                <h3>1. Agência Subjetiva</h3>
+                <div class="info-box">
+                    <p>Baseia-se na intencionalidade, planeamento, autorregulação e autoconsciência reflexiva (tomada de decisão, julgamento moral, autoria).</p>
+                </div>
+                
+                <h3>2. Agência Intersubjetiva</h3>
+                <div class="info-box">
+                    <p>Ação que emerge da interação com os outros e é continuamente influenciada por fatores relacionais, hierárquicos e contextuais (outros significativos, figuras de autoridade).</p>
+                </div>
+                
+                <h3>3. Agência Distribuída</h3>
+                <div class="info-box">
+                    <p>Acontece através de uma rede de elementos humanos e não-humanos (máquinas, tecnologias, objetos e até ambientes).</p>
+                </div>
+                
+                <h3>4. Agência Coletiva</h3>
+                <div class="info-box">
+                    <p>Intenções e ações em prol de objetivos comuns. Crença na eficácia coletiva, planeamento conjunto, distribuição de papéis, responsabilidade e reflexividade partilhada (espaço político).</p>
+                </div>
+                
+                <h3>5. Agência Proxy</h3>
+                <div class="info-box">
+                    <p>Indivíduos ou grupos recorrem a elementos externos para agir em seu nome, moldando resultados além do seu controlo direto (ex.: associações de estudantes trabalham para mudanças nas políticas escolares).</p>
+                </div>
+            </div>
+            
+            <!-- Página 18: Estudos -->
+            <div class="page">
+                <h2>11.3. Estudos sobre Sentido de Agência</h2>
+                
+                <h3>Mann et al. (2007): Jogar contra Humanos vs. Máquinas</h3>
+                <div class="info-box">
+                    <p><strong>Contexto:</strong> Jogadores de ténis devolviam bolas lançadas por: (1) outro jogador humano e (2) uma máquina automática.</p>
+                    <p><strong>Resultado:</strong> Jogadores têm melhor tempo de resposta e perceção de controlo quando jogam contra humanos, pois percebem intencionalidade no adversário. Com máquinas, o sentido de agência enfraquece.</p>
+                    <p><strong>Conclusão:</strong> A intencionalidade do outro reforça o sentido de agência.</p>
+                </div>
+                
+                <h3>Berberian et al. (2012): Simulação de Voo com Automação</h3>
+                <div class="info-box">
+                    <p><strong>Contexto:</strong> Simulação com diferentes níveis de automação:
+                    <ul>
+                        <li>Totalmente manual</li>
+                        <li>Semi-automático</li>
+                        <li>Altamente automatizado</li>
+                    </ul>
+                    </p>
+                    <p><strong>Resultado:</strong> Quanto maior a automação, menor o sentido de controlo pessoal; quando o participante controla mais diretamente, o sentido de agência aumenta.</p>
+                </div>
+                
+                <h3>Salatino et al. (2025): Operadores de Drones com IA Moral</h3>
+                <div class="info-box">
+                    <p><strong>Contexto:</strong> Operadores simulados de drones militares em dilemas morais com diferentes estilos de IA (agressiva, conservadora, equilibrada).</p>
+                    <p><strong>Resultado:</strong> O sentido de agência implícita aumentou (o corpo «sentiu» que agia mais ativamente). Mas o sentido de agência explícita (reflexiva) diminuiu: as pessoas relataram sentir-se menos responsáveis pela decisão final.</p>
+                    <p><strong>Conclusão:</strong> Coautoria da IA dilui a responsabilidade percebida.</p>
+                </div>
+            </div>
+            
+            <!-- Página 19: Imaginários Educativos -->
+            <div class="page">
+                <h2>12. Imaginários de Tecnologia Educativa</h2>
+                
+                <h3>Qual a Evolução? Comparação Histórica</h3>
+                
+                <div class="quote">
+                    <p><strong>B.F. Skinner, 1958:</strong></p>
+                    <p>«Apoiam a educação ao automatizar tarefas administrativas, libertando os professores para se concentrarem mais no ensino e nas interações.»</p>
+                    <p>«Professores devem ser libertados das tarefas instrutivas rotineiras para que possam lidar de forma mais eficaz com os problemas pessoais dos alunos.»</p>
+                </div>
+                
+                <div class="quote">
+                    <p><strong>Fórum Económico Mundial, 2024:</strong></p>
+                    <p>«Professores devem ser libertados das tarefas instrutivas rotineiras para que possam lidar de forma mais eficaz com os problemas pessoais dos alunos.»</p>
+                </div>
+                
+                <div class="quote">
+                    <p><strong>B.F. Skinner, 1958:</strong></p>
+                    <p>«A máquina, como o tutor particular, reforça o aluno a cada resposta correta, usando esse feedback imediato não apenas para modelar o seu comportamento da forma mais eficiente, mas também para mantê-lo forte.»</p>
+                </div>
+                
+                <div class="quote">
+                    <p><strong>Sal Khan (Academia Khan), 2023:</strong></p>
+                    <p>«Podemos dar a cada estudante um orientador académico.»</p>
+                </div>
+                
+                <h3>Questão Central</h3>
+                <div class="reflection-box">
+                    <p><strong>A que se refere a inovação escolar associada à tecnologia? Não estaremos sempre a encenar o que já imaginámos?</strong></p>
+                    <p>Tecnologias como IA refletem visões antigas: personalização, automatização, eficiência, inovação.</p>
+                    <p><strong>Que papel temos nós, psicólogos e psicólogas, na escrita de novos enredos coletivos?</strong></p>
+                </div>
+            </div>
+            
+            <!-- Página 20: Propósitos da Educação -->
+            <div class="page">
+                <h2>13. Propósitos da Educação (Gert Biesta, 2020)</h2>
+                
+                <h3>1. Qualificação</h3>
+                <div class="info-box">
+                    <p>A IA em educação responde predominantemente a este propósito de qualificação.</p>
+                    <p><strong>Exemplos:</strong></p>
+                    <ul>
+                        <li>Plataformas de aprendizagem adaptativa «otimizam» progresso com base em dados de desempenho (estudantes são agentes ou observadores?)</li>
+                        <li>Sistemas de avaliação automatizada que normalizam o feedback rápido (valor da dúvida e reflexividade?)</li>
+                        <li>Algoritmos que traçam perfis de estudantes para orientar escolhas de carreira (quais os critérios e como sai afetado o processo de escolha/tomada de decisão?)</li>
+                        <li>Painéis de avaliação baseados em evidência mensurável do progresso académico (estudantes compreendem critérios?)</li>
+                    </ul>
+                </div>
+                
+                <h3>2. Socialização</h3>
+                <div class="info-box">
+                    <ul>
+                        <li>As interações mediadas por IA são frequentemente superficiais ou estruturadas por lógicas algorítmicas</li>
+                        <li>Com a IA generativa, a diferença, o contexto e a dissonância tendem a ser esbatidos</li>
+                        <li><strong>Tensões:</strong> História vs. Memória (emoção), Informação vs. Testemunho (ética), Interpretação vs. Significado (contexto), Networking vs. Laços</li>
+                        <li>Escolas como espaços de participação e democracia?</li>
+                    </ul>
+                </div>
+                
+                <h3>3. Subjetificação</h3>
+                <div class="info-box">
+                    <ul>
+                        <li>A IA raramente cria espaço para a rutura, a surpresa ou o silêncio</li>
+                        <li>Quando o «aluno ideal» é aquele que se encaixa no algoritmo, há pouco lugar para a formação imprevisível e ética do sujeito</li>
+                        <li>A dissidência, a criatividade, a resistência e o questionamento podem ser vistos como «desvios»</li>
+                        <li><strong>Tensões:</strong> Privacidade (legalidade) vs. Anonimato, Intimidade, Segredo</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Página 21: Prompting -->
+            <div class="page">
+                <h2>13.1. Prompting como Prática de Autoria (Qualificação)</h2>
+                
+                <h3>Prompting Não é Googling</h3>
+                <div class="highlight-box">
+                    <ul>
+                        <li>É construir uma intenção comunicativa que molda a resposta</li>
+                        <li>Prática de aproximação ao propósito do trabalho</li>
+                        <li>Reforça a relação entre intenção, ação e resultado</li>
+                        <li>Posiciona estudantes como autores do processo, mesmo em coautoria com IA (agência distribuída)</li>
+                    </ul>
+                </div>
+                
+                <h3>Perspetiva Crítica: Maria Sukhareva</h3>
+                <p><em>Linguista Computacional e Especialista em Processamento de Linguagem Natural</em></p>
+                
+                <div class="info-box">
+                    <p><strong>Prompt engineering não é realmente «engenharia»</strong></p>
+                    <ul>
+                        <li>Não existem «prompts certos ou errados»</li>
+                        <li>Ajustar prompts é um processo empírico e instável, mais parecido com tentativa e erro do que com ciência</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>Ganho de produtividade é duvidoso</strong></p>
+                    <ul>
+                        <li>Muitas vezes o tempo gasto refinando prompts não gera resultados proporcionalmente melhores</li>
+                        <li>Se o modelo é limitado, o «prompt perfeito» não muda isso</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>Alta sensibilidade e imprevisibilidade</strong></p>
+                    <ul>
+                        <li>Pequenas mudanças no texto do prompt podem gerar respostas completamente diferentes</li>
+                        <li>Falta consistência entre modelos</li>
+                    </ul>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>«Apostas em prompts» (Prompt gambling)</strong></p>
+                    <p>A prática é comparável a um jogo de sorte: às vezes funciona, às vezes não. Não há método garantido nem previsibilidade de resultados.</p>
+                </div>
+            </div>
+            
+            <!-- Página 22: Princípios de Prompting -->
+            <div class="page">
+                <h2>13.2. Princípios de Prompting</h2>
+                
+                <table>
+                    <tr>
+                        <th>Etapa</th>
+                        <th>Princípio</th>
+                        <th>Pergunta Crítica</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>Contexto</strong></td>
+                        <td>Sobre o que é a tarefa? Porquê? Para quê?</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>Instrução</strong></td>
+                        <td>O que quero que a IA faça?</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Questionamento</strong></td>
+                        <td>Estou a desafiar a IA a interpretar/criar/comparar?</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Seriação</strong></td>
+                        <td>Posso dividir em passos? Que ordem faz sentido?</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>Iteração</strong></td>
+                        <td>Leio, avalio e reformulo? O que falta?</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>Tom</strong></td>
+                        <td>Quero um tom formal? Simples? Envolvente?</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>Exemplo</strong></td>
+                        <td>Posso mostrar um exemplo do que espero?</td>
+                    </tr>
+                </table>
+                
+               
+            
+            <!-- Página 23: Subjetificação e Socialização -->
+            <div class="page">
+                <h2>13.3. Práticas para Subjetificação e Socialização</h2>
+                
+                <h3>Desafio: Tomada de Decisão e Sentimento de Pertença</h3>
+                
+                <div class="highlight-box">
+                    <p><strong>Objetivos:</strong></p>
+                    <ul>
+                        <li>Inclusão de momentos em que estudantes escolhem, ajustam ou desafiam o sistema</li>
+                        <li>Autoavaliação como prática de agência</li>
+                        <li>Consciência e diferenciação do valor do trabalho realizado</li>
+                        <li>Prática de expressão de critérios próprios</li>
+                        <li>Reforça a relação entre intenção, avaliação e melhoria</li>
+                        <li>Promove autoria, reflexão e regulação da aprendizagem</li>
+                        <li>Exploração de si e dos outros (alteridade)</li>
+                    </ul>
+                </div>
+                
+                <h3>Tarefa Prática 1: Avaliação Entre-Pares</h3>
+                <div class="info-box">
+                    <p><strong>Descrição:</strong></p>
+                    <ul>
+                        <li>Avaliação entre-pares de trabalhos feitos em aula com auxílio do ChatGPT/Gemini</li>
+                        <li>Antes da correção, estudantes escolhem os 4 critérios de avaliação pelos quais querem ser avaliados</li>
+                        <li>Exemplos de critérios: clareza, criatividade, coerência, uso responsável da IA</li>
+                        <li>Explicam a razão das suas escolhas</li>
+                    </ul>
+                </div>
+                
+                <h3>Critérios Possíveis para Auto e Hetero-Avaliação</h3>
+                <ul>
+                    <li>Clareza</li>
+                    <li>Coerência</li>
+                    <li>Criatividade</li>
+                    <li>Pertinência para a tarefa</li>
+                    <li>Uso ético da IA</li>
+                    <li>Expressividade pessoal</li>
+                    <li>Originalidade</li>
+                    <li>Integração entre conteúdo gerado e conteúdo próprio</li>
+                </ul>
+            </div>
+            
+            <!-- Página 24: Socialização - Automação -->
+            <div class="page">
+                <h2>13.4. Socialização: Automação, Responsabilização e Ética</h2>
+                
+                <h3>Tarefa Prática 2: Debate sobre Autoria</h3>
+                <div class="info-box">
+                    <p><strong>Formato:</strong> Pequeno grupo com 1 professor(a) e estudantes com diferentes perfis:</p>
+                    <ul>
+                        <li>Desresponsabilizado/a conformista</li>
+                        <li>Ético/a e reflexivo/a</li>
+                        <li>Inseguro e dependente</li>
+                        <li>Utilizador estratégico</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-box">
+                    <p><strong>Pergunta Orientadora:</strong></p>
+                    <p>«Se usaste o ChatGPT/Gemini para produzir um trabalho, esse trabalho é teu?»</p>
+                </div>
+                
+                <h3>Pistas para o Debate</h3>
+                <ul>
+                    <li>«É igual copiar de um colega, de um livro ou usar IA?»</li>
+                    <li>«Se a IA compôs o texto, copiá-lo e dizer que é meu será plágio? Porquê?»</li>
+                    <li>«A quem pertence a autoria se eu só interagi com a máquina?»</li>
+                    <li>«Consigo falar em termos diferentes sobre a minha responsabilidade conforme o feedback (positivo e negativo)?»</li>
+                </ul>
+                
+                <div class="reflection-box">
+                    <h4>Notas sobre o debate:</h4>
+                    <p>Que argumentos mais me surpreenderam?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>Como este debate pode informar a minha prática?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+            
+            <!-- Página 25: Subjetificação - IA Terapêutica -->
+            <div class="page">
+                <h2>14. Subjetificação: Conversa com um Outro Artificial</h2>
+                
+                <h3>Exercício de Reflexão Crítica</h3>
+                
+                <div class="info-box">
+                    <h4>Instruções:</h4>
+                    <ol>
+                        <li>Imaginem uma situação-problema que pudesse levar um(a) estudante da vossa escola a procurar apoio psicológico através de uma aplicação de IA (ex. ansiedade académica, isolamento, bullying, identidade de género, relacionamento amoroso, relação com pais ou pares…)</li>
+                        <li>Usem a aplicação character.ai e procurem por uma psicóloga fictícia</li>
+                        <li>Como se fossem o/a estudante, desenvolvam um diálogo com ela</li>
+                        <li>Ao fim de 5 minutos, avaliem a conversa</li>
+                    </ol>
+                </div>
+                
+                <h3>Pontos para Reflexão Crítica</h3>
+                <ul>
+                    <li>Como foi o tom e a profundidade da resposta da IA?</li>
+                    <li>O que aconteceu à vulnerabilidade do/a estudante (sentiram-se expostos, compreendidos ou dirigidos/geridos)?</li>
+                    <li>Quais os riscos e oportunidades de uma utilização deste tipo?</li>
+                    <li>Como podem psicólogos/as responder/agir se estudantes afirmarem falar com «terapeuta de IA»?</li>
+                </ul>
+                
+                <div class="reflection-box">
+                    <h4>Reflexão Pessoal:</h4>
+                    <p>Situação-problema escolhida:</p>
+                    <p>_______________________________________________</p>
+                    <p>Principal preocupação identificada:</p>
+                    <p>_______________________________________________</p>
+                    <p>Como abordaria esta situação:</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+            
+            <!-- Página 26: Novas Responsabilidades -->
+            <div class="page">
+                <h2>15. Psicologia: Desafio aos Profissionais</h2>
+                
+                <h3>Novas Responsabilidades</h3>
+                <p>Compreender e intervir nos efeitos psicológicos, relacionais e organizacionais ao longo de toda a cadeia de IA, do desenvolvimento à utilização.</p>
+                
+                <div class="highlight-box">
+                    <h4>1. Impactos do Design Tecnológico nos Trabalhadores</h4>
+                    <p>Apoiar equipas que lidam com tarefas automatizadas, exposição a conteúdos tóxicos ou pressão de desempenho imposta por métricas algorítmicas.</p>
+                    <p><strong>Objetivo:</strong> preservar a agência humana, prevenir fadiga emocional e desgaste por julgamento moral e promover bem-estar ocupacional.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>2. Impactos do Uso da IA nos Utilizadores</h4>
+                    <p>Compreender como sistemas inteligentes influenciam perceções de controlo, autonomia e identidade (ex.: confiança excessiva, desresponsabilização, dependência cognitiva).</p>
+                    <p><strong>Objetivo:</strong> restaurar sentido de autoria, promover uso crítico, intencional e significativo.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h4>3. Mediação Ética em Sistemas Distribuídos (entre Humanos e Sistemas Inteligentes)</h4>
+                    <p>Intervir como «ponte reflexiva», assegurando que o desenvolvimento e uso da IA, nomeadamente generativa, respeita princípios de agência subjetiva, intersubjetiva, coletiva.</p>
+                </div>
+            </div>
+            
+            <!-- Página 27: Novos Perfis -->
+            <div class="page">
+                <h2>16. Novos Perfis Profissionais em Psicologia</h2>
+                
+                <p>A Psicologia expande-se para novos territórios de atuação interdisciplinar.</p>
+                
+                <div class="info-box">
+                    <h4>1. Auditoria Algorítmica com Enfoque Humano</h4>
+                    <p>Avaliar impactos emocionais, sociais e comportamentais de sistemas automatizados (ex. vieses, perceção de justiça, transparência).</p>
+                    <p><strong>Psicologia como guardiã da agência e do sentido ético em ecossistemas sociodigitais.</strong></p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>2. Consultoria e Formação em Competências Humanas Digitais</h4>
+                    <p>Capacitar gestores, professores e equipas técnicas para compreender os efeitos psicológicos da IA nas suas práticas.</p>
+                    <p>Mais do que literacia digital, importa questionar e desenvolver literacia para a ética do trabalho e ética da educação (e não para a ética da IA).</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>3. Design Ético e Centrado no Humano</h4>
+                    <p>Participar em equipas multidisciplinares de desenvolvimento tecnológico, garantindo que produtos de IA incorporam princípios psicológicos de bem-estar, confiança e autonomia.</p>
+                    <p>Criar oportunidades para a participação de diferentes agentes/stakeholders em fase de I&D.</p>
+                </div>
+                
+                <div class="info-box">
+                    <h4>4. Contributo para Políticas Públicas em torno da IA</h4>
+                    <p>Integrar grupos de consulta pública e regulação ética, promovendo «guardrails» psicológicos que previnam danos e promovam oportunidades para ganhos cognitivos, emocionais e sociais.</p>
+                </div>
+            </div>
+            
+            <!-- Página 28: Síntese de Aprendizagens -->
+            <div class="page">
+                <h2>17. Síntese de Aprendizagens Principais</h2>
+                
+                <h3>Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>Agência Humana:</strong> Capacidade de agir intencionalmente, fazer escolhas com significado e ser responsável pelas próprias ações</li>
+                    <li><strong>IA como Construção Sociotécnica:</strong> Sistemas que refletem valores, imaginários e relações de poder</li>
+                    <li><strong>Vieses Algorítmicos:</strong> Ausência de neutralidade em sistemas de IA</li>
+                    <li><strong>Agência Distribuída:</strong> Ação partilhada entre humanos, dispositivos, infraestruturas, fluxos de informação, protocolos, corpos e sistemas cognitivos e materiais</li>
+                    <li><strong>Auditoria Algorítmica:</strong> Revisão sistemática de como dados e algoritmos tomam decisões</li>
+                </ul>
+                
+                <h3>Questões Críticas para a Prática</h3>
+                <div class="reflection-box">
+                    <ol>
+                        <li>Como preservar o sentido de agência humana quando utilizamos ferramentas de IA em processos terapêuticos, educativos ou organizacionais?</li>
+                        <li>Que modelos psicológicos (cognitivo-comportamentais, biomédicos, comportamentalistas, etc.) são privilegiados e quais ficam invisibilizados?</li>
+                        <li>Como assegurar que tecnologias de apoio emocional não ultrapassam fronteiras terapêuticas nem criam falsas expectativas de cuidado?</li>
+                        <li>Qual o meu papel na mediação ética entre humanos e sistemas inteligentes?</li>
+                        <li>Como podemos prevenir danos psicológicos decorrentes de uso inadequado de IA?</li>
+                    </ol>
+                </div>
+                
+                <div class="quote">
+                    «Não perguntemos 'o que a IA pode fazer', mas se 'queremos que faça'.»
+                </div>
+            </div>
+            
+            <!-- Página 29: Plano de Ação -->
+            <div class="page">
+                <h2>18. Plano de Ação Pessoal</h2>
+                
+                <h3>Com base nas aprendizagens deste workshop, defino:</h3>
+                
+                <div class="reflection-box">
+                    <h4>1. Três Mudanças Imediatas na Minha Prática</h4>
+                    <p>a) _______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>b) _______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>c) _______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+                
+                <div class="reflection-box">
+                    <h4>2. Áreas para Aprofundamento</h4>
+                    <p>Que temas gostaria de explorar mais?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+                
+                <div class="reflection-box">
+                    <h4>3. Colaborações a Desenvolver</h4>
+                    <p>Com quem posso colaborar para implementar estas mudanças?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+                
+                <div class="reflection-box">
+                    <h4>4. Compromisso Ético</h4>
+                    <p>Como posso ser guardiã/guardião da agência humana no meu contexto de trabalho?</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+            
+            <!-- Página 30: Recursos -->
+            <div class="page">
+                <h2>19. Recursos e Referências</h2>
+                
+                <h3>Autores e Conceitos-Chave Mencionados</h3>
+                <ul>
+                    <li><strong>McCarthy:</strong> Conceção clássica de IA</li>
+                    <li><strong>Russell & Norvig:</strong> Conceção funcionalista de IA</li>
+                    <li><strong>Jasanoff & Kim; Pasquinelli:</strong> Conceção crítica/sociotécnica</li>
+                    <li><strong>Latour:</strong> Teoria ator-rede e sistemas sociotécnicos</li>
+                    <li><strong>Henri Bergson:</strong> Inteligência vs. Intuição</li>
+                    <li><strong>Piaget, Vygotsky, Bruner:</strong> Inteligência como ação em desenvolvimento</li>
+                    <li><strong>Catherine Malabou:</strong> Quatro golpes narcísicos</li>
+                    <li><strong>Gert Biesta:</strong> Propósitos da educação</li>
+                    <li><strong>B.F. Skinner:</strong> Instrução programada</li>
+                </ul>
+                
+                <h3>Estudos sobre Sentido de Agência</h3>
+                <ul>
+                    <li>Mann et al. (2007) - Jogar humanos vs. máquinas</li>
+                    <li>Berberian et al. (2012) - Simulação de voo com automação</li>
+                    <li>Salatino et al. (2025) - Operadores de drones com IA moral</li>
+                </ul>
+                
+                <h3>Ferramentas Mencionadas</h3>
+                <ul>
+                    <li>DeepAI</li>
+                    <li>Gemini</li>
+                    <li>ChatGPT Edu, Gemini, Copilot</li>
+                    <li>MagicSchool.ai, LessonLab</li>
+                    <li>Khanmigo, Socratic, Perplexity</li>
+                    <li>Grammarly, QuillBot, DeepL Write</li>
+                    <li>Duolingo Max, TalkPal</li>
+                    <li>Character.ai</li>
+                    <li>claude.ai</li>
+		    <li>gamma.app</li>
+                </ul>
+            </div>
+            
+            <!-- Página 31: Notas Finais -->
+            <div class="page">
+                <h2>20. Espaço para Notas e Reflexões Livres</h2>
+                
+                <div class="reflection-box" style="min-height: 400px; padding: 30px;">
+                    <p><em>Use este espaço para registar ideias, questões, insights ou dúvidas que surgiram durante o workshop:</em></p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                    <p>_______________________________________________</p>
+                </div>
+            </div>
+
+       <!-- Página 32: Bibliografia Sugerida -->
+            <div class="page">
+                <h2>21. Referências Bibliográficas</h2>
+            <ul>
+    <li>Archer, M. S. (2014). <i>Structure, agency and the internal conversation</i>. Cambridge University Press. https://doi.org/10.1017/CBO9781139087315</li>
+
+    <li>Bandura, A. (2001). Social cognitive theory: An agentic perspective. <i>Annual Review of Psychology, 52</i>, 1–26. https://doi.org/10.1146/annurev.psych.52.1.1</li>
+
+    <li>Biesta, G. (2013). <i>Beautiful risk of education</i>. Routledge. https://doi.org/10.4324/9781315635866</li>
+
+    <li>Dignum, V. (2019). <i>Responsible Artificial Intelligence: How to develop and use AI in a responsible way</i>. Springer. https://doi.org/10.1007/978-3-030-30371-6</li>
+
+    <li>Hayles, N. K. (2017). <i>Unthought: The power of the cognitive nonconscious</i>. University of Chicago Press.</li>
+
+    <li>Jasanoff, S., & Kim, S.-H. (Eds.). (2015). <i>Dreamscapes of modernity: Socio-technical imaginaries and the fabrication of power</i>. University of Chicago Press.</li>
+
+    <li>Latour, B. (2005). <i>Reassembling the social: An introduction to actor-network-theory</i>. Oxford University Press.</li>
+
+    <li>Malabou, C. (2021). <i>Plasticity and intelligence: Between philosophy and the neurosciences</i>. Polity Press.</li>
+
+    <li>Mouta, A., Pinto-Llorente, A. M., & Torrecilla-Sánchez, E. M. (2025). “Where is agency moving to?”: Exploring the interplay between AI technologies in education and human agency. <i>Digital Society, 4</i>(49). https://doi.org/10.1007/s44206-025-00203-9</li>
+
+    <li>Mouta, A., Pinto-Llorente, A. M., & Torrecilla-Sánchez, E. M. (2024). Uncovering blind spots in education ethics: Insights from a systematic literature review on Artificial Intelligence in education. <i>International Journal of Artificial Intelligence in Education</i>. https://doi.org/10.1007/s40593-023-00384-9</li>
+
+    <li>Pasquinelli, M. (2023). <i>The Eye of the Master: A Social History of Artificial Intelligence</i>. Verso.</li>
+
+    <li>Turkle, S. (2015). <i>Reclaiming conversation: The power of talk in a digital age</i>. Penguin Press.</li>
+
+    <li>Zuboff, S. (2019). <i>The age of surveillance capitalism: The fight for a human future at the new frontier of power</i>. PublicAffairs.</li>
+</ul>
+
+            
+            <!-- Página Final -->
+            <div class="page">
+                <div style="text-align: center; padding: 100px 40px;">
+                    <h2 style="color: #667eea; font-size: 2.5em; margin-bottom: 30px;">Agradecimentos</h2>
+                    
+                    <p style="font-size: 1.2em; margin-bottom: 40px;">Obrigada por participar neste workshop e por se envolver numa reflexão crítica sobre o papel da Psicologia na era dos sistemas sociotécnicos de IA.</p>
+                    
+                    <div style="margin: 60px 0;">
+                        <p style="font-size: 1.1em; font-style: italic;">«Que papel temos nós, psicólogos e psicólogas, na escrita de novos enredos coletivos?»</p>
+                    </div>
+                    
+                    <div style="margin-top: 80px; padding-top: 40px; border-top: 2px solid #667eea;">
+                        <p style="font-size: 1.1em;"><strong>Ana Mouta</strong></p>
+                        <p>mouta.ana@gmail.com</p>
+                        <p style="margin-top: 20px; font-size: 0.9em;">Workshop DRN.OPP | Outubro de 2025</p>
+                    </div>
+
+ <p>O autor disponibiliza o presente trabalho sob a Licença Creative Commons Atribuição-NãoComercial-PartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0), a qual permite partilha e adaptação para fins não comerciais, desde que seja dada atribuição adequada e que as obras derivadas sejam distribuídas sob a mesma licença.
+
+Texto legal completo da licença:
+https://creativecommons.org/licenses/by-nc-sa/4.0/</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="nav-buttons">
+        <button onclick="window.print()">📄 Imprimir/PDF</button>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆ Topo</button>
+    </div>
+    
+ 
